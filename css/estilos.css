@@ -10,23 +10,35 @@ body{
  	margin: 0% 10% 0% 10%;
  	text-align: center;
 }
+/*GENERAL*/
+img{
+	box-shadow: 2px 2px 2px #02010a;
+
+}
+
 /*HEADER*/
 header{
 	background-color: #5b7989;
-	border-radius: 10px 0px;
+	border-radius: 10px 10px 0px 0px;
 	width: 100%;
 	height: 100px;
-	
-
-
+	animation-name:inicio;
+	animation-duration: 1s;
+}
+@keyframes inicio{
+    0%   {margin-top:150%;}
+    60%  {margin-top:-5%;}
+    100% {margin-top:0%;}
 }
 header h1{
-	color: white;
-	text-shadow: 2px 2px #02010a;
-	margin-left:5px;
-	font-size: 2.5em;
-	float:left;
-	width: 50%;
+    color: white;
+    text-shadow: 2px 2px #02010a;
+    margin-left: 2%;
+    font-size: 2em;
+    float: left;
+    width: 48%;
+    margin-top: auto;
+    padding-top: 3%;
 
 }
 header nav{
@@ -65,14 +77,93 @@ header ul li a{
 }
 
 /*SECTIONS*/
-#Principal{
+#Central{
 	background-color: #82c3a6;
 	text-align: center;
 	top: 0px;
 	
 
 }
-#Principal img{
+#Central img{
 	width: 80%;
 	margin: 20px;
+}
+#Secundaria{
+	background-color: #d5c75f;
+	display: flex;
+	padding: 20px;
+	-webkit-transition: transform 55s; /* Safari */
+    transition: transform 55s;
+
+	min-height: 300px;
+
+}
+#Secundaria .Paisajes{
+	width: 40%;
+	margin: 40px;
+
+	order: 1;
+	flex-grow:1;
+	-webkit-transition: webkit-transform .4s; /* Safari */
+    transition: transform .4s;
+
+}
+#Secundaria .Retratos{
+	width: 40%;
+	margin: 40px;
+	flex-grow:1;
+	order: 2;
+
+}
+#Secundaria img{
+	width: 100%;
+	min-height: 195px;
+	min-width: 260px;
+	-webkit-transition: webkit-transform 1s, box-shadow 1s; /* Safari */
+    transition: transform 1s, box-shadow 1s;
+}
+#Secundaria h1{
+	font-size: 2em;
+	margin: 0;
+	text-decoration: underline;
+}
+#Secundaria .Paisajes img:hover{
+
+    -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
+    transform: rotate(10deg);
+    box-shadow: 2px 2px 2px #82c3a6;
+}
+#Secundaria .Retratos img:hover{
+
+    -webkit-transform: translate(5px,20px); /* Chrome, Safari, Opera */
+    transform: translate(20px,-5px);
+    box-shadow: 2px 2px 2px #82c3a6;
+}
+
+/*FOOTER*/
+footer{
+	display: flex;
+	flex-basis: 33%;
+	background-color: #C6d5c5;
+	border-radius: 0px 0px 10px 10px;
+}
+footer div{
+	margin: 5px;
+	width: 30%;
+	text-align: left;
+}
+footer h2{
+	margin-top: 20px;
+	margin-bottom: 0px;
+	font-size: 2em;
+	font-weight:100;
+
+}
+footer div img{
+	width: 35px;
+	height:35px;
+	box-shadow: none;
+}
+footer div span{
+	padding-bottom: 10px;
 }
