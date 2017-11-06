@@ -37,8 +37,8 @@ header h1{
     font-size: 2em;
     float: left;
     width: 48%;
-    margin-top: auto;
-    padding-top: 3%;
+    top:50%;
+   
 
 }
 header nav{
@@ -165,5 +165,5 @@ footer div img{
 	box-shadow: none;
 }
 footer div span{
-	padding-bottom: 10px;
+	top:50%;
 }
